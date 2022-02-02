@@ -1,6 +1,17 @@
 package collections;
 
 public class Goods {
+
+    private String name;
+    private double weight;
+    private String dateOfManufact;
+
+    public Goods(String name, double weight, String dateOfManufact) {
+        this.name = name;
+        this.weight = weight;
+        this.dateOfManufact = dateOfManufact;
+    }
+
     public String getName() {
         return name;
     }
@@ -9,11 +20,11 @@ public class Goods {
         this.name = name;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
@@ -25,15 +36,13 @@ public class Goods {
         this.dateOfManufact = dateOfManufact;
     }
 
-    private String name;
-    private int weight;
-    private String dateOfManufact;
-
-    public Goods(String name,int weight, String dateOfManufact) {
-        this.name = name;
-        this.weight = weight;
-        this.dateOfManufact = dateOfManufact;
-
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", dateOfManufact='" + dateOfManufact + '\'' +
+                '}';
     }
-
 }
+
